@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<head>
+        <title>Free Wordcounter Service</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/countapp.css' %}">
+    </head>
+    <body>
+    <div class="page-header">
+<h1>By anylzing your text, it has total <bold>{{total}}</bold> words!</h1>
+</div>
+<h2>Here is your submitted text :</h2><h4>{{full}}</h4>
+<h2>Here are the each counted words :</h2>
+<h4>
+    {% for word, countTotal in dictionary %}
+    {{word}} - {{countTotal}}
+    <br>
+    {%endfor%}
+</h4>
+<form action="{%url 'home'%}">
+        <input type="submit" value="Do it again"/>
+        </form>
+</h2>
+<br>
+<br>
+<br>
+
+<footer>
+        Associated with LikeLion, 7th Generation
+        <br>
+        Designed by Jessie Yun. 2019. All rights reserved. (c)
+    </footer>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<head>
+    <title>Free Wordcounter Service</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/countapp.css' %}">
+</head>
+<div class="page-header">
+<h1>ABOUT</h1>
+</div>
+<div class = "post">
+<p>This is a website that assists you in counting the words from the paragraphs and sentences you type into the box. Feel free to insert your text in the box and calculate the words easily!</p>
+<form action="{%url 'home'%}">
+<input type="submit" value="Go back to calculate"/>
+</div>
+<br>
+<br>
+<br>
+
+<footer>
+        Associated with LikeLion, 7th Generation
+        <br>
+        Designed by Jessie Yun. 2019. All rights reserved. (c)
+    </footer>
